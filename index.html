@@ -2,6 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="p:domain_verify" content="9d2c0eadc3f78b48153bee47dff12860"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuva Living - Inspiration Déco & Organisation Maison</title>
     <meta name="description" content="Découvrez des inspirations déco, astuces rangement et produits sélectionnés pour embellir votre intérieur.">
@@ -37,242 +38,208 @@
             opacity: 0.95;
         }
         
-        nav {
-            background: white;
-            padding: 1rem 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
-        
-        nav a {
-            color: #2D3436;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        
-        nav a:hover {
-            color: #D4A373;
-        }
-        
         .container {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 2rem 1rem;
-        }
-        
-        section {
-            background: white;
-            margin: 2rem 0;
             padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
         
-        h2 {
+        .hero {
+            background: white;
+            padding: 3rem;
+            margin: 2rem 0;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+        
+        .hero h2 {
             color: #D4A373;
+            font-size: 2rem;
             margin-bottom: 1rem;
-            font-size: 1.8rem;
-            border-bottom: 2px solid #9CAF88;
-            padding-bottom: 0.5rem;
         }
         
-        h3 {
-            color: #2D3436;
-            margin-top: 1.5rem;
-            margin-bottom: 0.8rem;
+        .hero p {
+            font-size: 1.1rem;
+            color: #636E72;
+            max-width: 800px;
+            margin: 0 auto 2rem;
         }
         
-        ul {
-            margin-left: 2rem;
-            margin-top: 0.5rem;
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
         }
         
-        li {
-            margin-bottom: 0.5rem;
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         
-        a {
-            color: #D4A373;
-            text-decoration: none;
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
         }
         
-        a:hover {
-            text-decoration: underline;
+        .feature-card h3 {
+            color: #9CAF88;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
         }
         
-        .pinterest-link {
-            display: inline-block;
-            background: #E60023;
+        .feature-card p {
+            color: #636E72;
+            line-height: 1.8;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #9CAF88 0%, #D4A373 100%);
             color: white;
-            padding: 0.8rem 1.5rem;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 1rem;
-            transition: background 0.3s;
+            padding: 3rem;
+            border-radius: 15px;
+            text-align: center;
+            margin: 3rem 0;
         }
         
-        .pinterest-link:hover {
-            background: #AD081B;
+        .cta-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #9CAF88;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
             text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-top: 1.5rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.25);
         }
         
         footer {
             background: #2D3436;
             color: white;
             text-align: center;
-            padding: 2rem 0;
-            margin-top: 3rem;
+            padding: 2rem;
+            margin-top: 4rem;
         }
         
-        .highlight {
-            background: #FFF9E6;
-            padding: 1rem;
-            border-left: 4px solid #D4A373;
-            margin: 1rem 0;
+        footer a {
+            color: #D4A373;
+            text-decoration: none;
         }
         
-        .date {
-            color: #9CAF88;
-            font-size: 0.9rem;
-            font-style: italic;
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        .social-links {
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            color: white;
+            margin: 0 1rem;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: #D4A373;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .hero {
+                padding: 2rem 1.5rem;
+            }
+            
+            .hero h2 {
+                font-size: 1.5rem;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <h1>🏡 Nuva Living</h1>
-        <p>Inspiration Déco & Organisation Maison</p>
+        <p>Inspiration Déco · Organisation · Style de Vie</p>
     </header>
-    
-    <nav>
-        <ul>
-            <li><a href="#about">À propos</a></li>
-            <li><a href="#pinterest">Pinterest</a></li>
-            <li><a href="#privacy">Politique de Confidentialité</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-    
+
     <div class="container">
-        <section id="about">
-            <h2>À propos de Nuva Living</h2>
-            <p>Bienvenue sur Nuva Living ! Nous partageons des inspirations déco, astuces d'organisation et produits sélectionnés pour vous aider à créer un intérieur qui vous ressemble.</p>
+        <section class="hero">
+            <h2>Bienvenue dans l'univers Nuva Living</h2>
+            <p>
+                Découvrez chaque jour des inspirations déco scandinaves, des astuces d'organisation 
+                et une sélection de produits soigneusement choisis pour embellir votre intérieur. 
+                Du minimalisme chaleureux au style hygge, créez l'espace qui vous ressemble.
+            </p>
+        </section>
+
+        <section class="features">
+            <div class="feature-card">
+                <h3>✨ Inspiration Déco</h3>
+                <p>
+                    Palettes de couleurs tendances, ambiances cosy, style scandinave... 
+                    Trouvez l'inspiration pour transformer votre intérieur en un lieu unique et apaisant.
+                </p>
+            </div>
             
-            <p style="margin-top: 1rem;">Notre contenu est publié sur Pinterest, où nous proposons :</p>
-            <ul>
-                <li>✨ Inspirations déco pour petits espaces</li>
-                <li>🏡 Astuces rangement et organisation</li>
-                <li>💡 Sélection de produits design et fonctionnels</li>
-                <li>🌿 Tendances déco éco-responsables</li>
-            </ul>
+            <div class="feature-card">
+                <h3>📦 Organisation Maison</h3>
+                <p>
+                    Astuces pratiques, méthodes KonMari, optimisation des petits espaces... 
+                    Simplifiez votre quotidien avec des solutions de rangement intelligentes.
+                </p>
+            </div>
             
-            <div class="highlight">
-                <strong>📢 Transparence :</strong> Nuva Living participe au programme d'affiliation Amazon Associates. Certains liens vers des produits peuvent générer une petite commission si vous effectuez un achat, sans frais supplémentaires pour vous. Cela nous aide à continuer à créer du contenu de qualité.
+            <div class="feature-card">
+                <h3>🛋️ Sélection Produits</h3>
+                <p>
+                    Luminaires design, accessoires déco, solutions de rangement... 
+                    Découvrez nos coups de cœur pour créer un intérieur harmonieux et fonctionnel.
+                </p>
             </div>
         </section>
-        
-        <section id="pinterest">
-            <h2>Suivez-nous sur Pinterest</h2>
-            <p>Retrouvez toutes nos inspirations déco et astuces maison sur notre compte Pinterest officiel :</p>
-            <a href="https://pinterest.com/nuvaliving" class="pinterest-link" target="_blank">
-                📌 Visiter notre Pinterest
+
+        <section class="cta-section">
+            <h2>Rejoignez la communauté Nuva Living</h2>
+            <p>Suivez-nous sur Pinterest pour ne rien manquer de nos inspirations quotidiennes !</p>
+            <a href="https://www.pinterest.fr/nuvaliving" class="cta-button" target="_blank">
+                📌 Découvrir notre Pinterest
             </a>
         </section>
-        
-        <section id="privacy">
-            <h2>Politique de Confidentialité</h2>
-            <p class="date">Dernière mise à jour : 19 décembre 2024</p>
-            
-            <h3>1. Informations collectées</h3>
-            <p>Nuva Living ne collecte aucune information personnelle directement via ce site web. Nous publions uniquement du contenu sur Pinterest.</p>
-            
-            <h3>2. Utilisation de Pinterest</h3>
-            <p>Notre contenu est publié sur Pinterest. Lorsque vous interagissez avec nos épingles sur Pinterest (likes, enregistrements, clics), Pinterest peut collecter des données selon sa propre politique de confidentialité :</p>
-            <p><a href="https://policy.pinterest.com/fr/privacy-policy" target="_blank">Politique de confidentialité Pinterest</a></p>
-            
-            <h3>3. Liens d'affiliation Amazon</h3>
-            <p>Nuva Living participe au Programme Partenaires d'Amazon EU, un programme d'affiliation conçu pour permettre à des sites de percevoir une rémunération grâce à la création de liens vers Amazon.fr.</p>
-            
-            <p>Lorsque vous cliquez sur un lien produit Amazon depuis nos épingles Pinterest :</p>
-            <ul>
-                <li>Vous êtes redirigé vers le site Amazon.fr</li>
-                <li>Amazon peut utiliser des cookies pour suivre votre navigation</li>
-                <li>Si vous effectuez un achat, nous pouvons recevoir une commission</li>
-                <li>Le prix du produit reste inchangé pour vous</li>
-            </ul>
-            
-            <p>Amazon gère ses propres données selon sa politique de confidentialité :<br>
-            <a href="https://www.amazon.fr/gp/help/customer/display.html?nodeId=201909010" target="_blank">Politique de confidentialité Amazon</a></p>
-            
-            <h3>4. Cookies</h3>
-            <p>Ce site web n'utilise pas de cookies. Cependant, Pinterest et Amazon peuvent utiliser leurs propres cookies lorsque vous visitez leurs plateformes via nos liens.</p>
-            
-            <h3>5. Données d'utilisation</h3>
-            <p>Nous utilisons l'API Pinterest pour publier du contenu automatiquement. Les données d'analyse fournies par Pinterest (impressions, clics, enregistrements) sont consultées uniquement pour améliorer la qualité de notre contenu.</p>
-            
-            <h3>6. Partage de données</h3>
-            <p>Nuva Living ne vend, n'échange ni ne transfère vos informations personnelles à des tiers. Les seules plateformes tierces impliquées sont :</p>
-            <ul>
-                <li>Pinterest (pour la publication de contenu)</li>
-                <li>Amazon (pour les liens d'affiliation)</li>
-            </ul>
-            
-            <h3>7. Protection des mineurs</h3>
-            <p>Notre contenu n'est pas destiné aux enfants de moins de 13 ans. Nous ne collectons pas sciemment d'informations personnelles auprès de mineurs.</p>
-            
-            <h3>8. Vos droits (RGPD)</h3>
-            <p>Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez des droits suivants :</p>
-            <ul>
-                <li>Droit d'accès à vos données</li>
-                <li>Droit de rectification</li>
-                <li>Droit à l'effacement</li>
-                <li>Droit à la limitation du traitement</li>
-                <li>Droit à la portabilité</li>
-                <li>Droit d'opposition</li>
-            </ul>
-            
-            <p>Pour exercer ces droits concernant Pinterest, contactez directement Pinterest.<br>
-            Pour Amazon, contactez Amazon.</p>
-            
-            <h3>9. Modifications de cette politique</h3>
-            <p>Nous nous réservons le droit de modifier cette politique de confidentialité à tout moment. Les modifications seront publiées sur cette page avec une nouvelle date de mise à jour.</p>
-            
-            <h3>10. Contact</h3>
-            <p>Pour toute question concernant cette politique de confidentialité, vous pouvez nous contacter via notre compte Pinterest : <a href="https://pinterest.com/nuvaliving" target="_blank">@nuvaliving</a></p>
-            
-            <div class="highlight" style="margin-top: 2rem;">
-                <strong>📧 Divulgation importante :</strong> En tant que Partenaire Amazon, nous réalisons un bénéfice sur les achats remplissant les conditions requises. Tous les liens vers des produits Amazon sont clairement identifiés avec les mentions #ad ou #affiliate.
-            </div>
-        </section>
-        
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Pour nous contacter ou en savoir plus sur Nuva Living :</p>
-            <ul>
-                <li>📌 Pinterest : <a href="https://pinterest.com/nuvaliving" target="_blank">@nuvaliving</a></li>
-                <li>🌐 Site web : Cette page</li>
-            </ul>
-            
-            <p style="margin-top: 1rem;"><em>Nous répondons généralement sous 48h.</em></p>
-        </section>
     </div>
-    
+
     <footer>
-        <p>&copy; 2024 Nuva Living. Tous droits réservés.</p>
-        <p style="margin-top: 0.5rem; font-size: 0.9rem;">
-            Participant au Programme Partenaires Amazon EU
+        <p>&copy; 2025 Nuva Living - Tous droits réservés</p>
+        <div class="social-links">
+            <a href="https://www.pinterest.fr/nuvaliving" target="_blank" title="Pinterest">📌</a>
+            <a href="https://www.instagram.com/nuvaliving" target="_blank" title="Instagram">📷</a>
+        </div>
+        <p style="margin-top: 1.5rem; font-size: 0.85rem; opacity: 0.7;">
+            En tant que Partenaire Amazon, je réalise un bénéfice sur les achats remplissant les conditions requises.
         </p>
     </footer>
 </body>
